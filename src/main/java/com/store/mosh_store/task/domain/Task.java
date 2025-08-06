@@ -4,7 +4,8 @@ public class Task {
     private String id;
     private String title;
     private String description;
-    private STATUS status;
+
+    private STATUS status = STATUS.PENDING;
 
     public Task(){}
 

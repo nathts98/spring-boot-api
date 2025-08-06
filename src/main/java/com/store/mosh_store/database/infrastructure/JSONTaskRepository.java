@@ -13,7 +13,7 @@ public class JSONTaskRepository implements TaskRepository {
 
     @Override
     public void add(Task task) {
-
+        storage.put(task.getId(), task);
     }
 
     @Override

@@ -14,7 +14,8 @@ public class CreateTaskUseCase {
         this.taskRepository = taskRepository;
     }
 
-    public void createNewTask(Task task){
+    public void createNewTask(String id, String description, String title){
+        Task task = new Task(id, description, title);
         this.taskRepository.add(task);
     }
 }

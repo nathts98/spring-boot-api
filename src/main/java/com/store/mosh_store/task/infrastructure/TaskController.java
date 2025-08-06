@@ -1,7 +1,7 @@
 package com.store.mosh_store.task.infrastructure;
 
 import com.store.mosh_store.task.application.CreateTaskUseCase;
-import com.store.mosh_store.task.domain.Task;
+import com.store.mosh_store.task.domain.CreateTaskRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +19,7 @@ public class TaskController {
 
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
-    public void createTask(@RequestBody Task task){
-        this.createTaskUseCase.createNewTask(task);
+    public void createTask(@RequestBody CreateTaskRequest request){
+        this.createTaskUseCase.createNewTask(request.id(), request.description(), request.title());
     }
 }

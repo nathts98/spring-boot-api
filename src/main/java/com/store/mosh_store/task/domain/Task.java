@@ -7,6 +7,13 @@ public class Task {
 
     private STATUS status = STATUS.PENDING;
 
-    public Task(){}
+    public Task(String id, String description, String title){
+        this.id = id;
+        this.title = title;
+        this.description = description;
+    }
 
+    public String getId(){
+        return this.id;
+    }
 }

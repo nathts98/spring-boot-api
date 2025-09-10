@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 public class CreateTaskUseCase {
     private final TaskRepository taskRepository;
 
-    @Autowired
     public CreateTaskUseCase(TaskRepository taskRepository){
         this.taskRepository = taskRepository;
     }
